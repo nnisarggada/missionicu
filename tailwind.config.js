@@ -5,6 +5,14 @@ module.exports = {
     extend: {
       height: {
         screen: "100dvh",
+        section: "100dvh",
+      },
+      backgroundImage: {
+        hero: "url('../src/assets/images/hero.png')",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
     colors: {

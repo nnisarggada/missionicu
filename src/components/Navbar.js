@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
       <a
         href={link}
-        className="flex-1 flex justify-center items-center w-full text-2xl font-bold border-solid border-2 border-brand-300"
+        className="flex-1 flex justify-center items-center w-full text-2xl font-bold border-solid border-2 border-brand-200"
       >
         {text}
       </a>
