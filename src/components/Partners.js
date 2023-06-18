@@ -30,12 +30,10 @@ const Partners = () => {
   };
 
   return (
-    <div className="px-4 py-20">
-      <div className="h-80 bg-brand-500 rounded-3xl flex flex-col justify-evenly items-center px-4">
-        <h1 className="text-white font-bold text-3xl">Our Partners</h1>
-        <div className="w-full h-48 flex items-center">
-          <ScrollingDiv />
-        </div>
+    <div className="h-80 bg-brand-500 rounded-3xl flex flex-col justify-evenly items-center px-4 mt-10 mx-4">
+      <h1 className="text-white font-bold text-3xl">Our Partners</h1>
+      <div className="w-full h-48 flex items-center">
+        <ScrollingDiv />
       </div>
     </div>
   );

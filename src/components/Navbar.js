@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
       <a
         href={link}
-        className="flex-1 flex justify-center items-center w-full text-2xl font-bold border-solid border-2 border-brand-200"
+        className="h-16 flex justify-center items-center w-full text-2xl font-bold border-solid border-2 border-brand-200"
       >
         {text}
       </a>
@@ -45,12 +45,10 @@ const Navbar = () => {
         <div className="flex justify-end mb-10 -mr-2">
           <MdClose className="text-4xl" onClick={() => setShowMenu(false)} />
         </div>
-        <div className="h-1/2 flex flex-col items-center gap-4 text-2xl font-bold">
+        <div className="flex flex-col items-center gap-4 text-2xl font-bold">
           <MenuLink text="Home" link="#home" />
-          <MenuLink text="Home" link="#home" />
-          <MenuLink text="Home" link="#home" />
-          <MenuLink text="Home" link="#home" />
-          <MenuLink text="Home" link="#home" />
+          <MenuLink text="Nominate" link="#nominate" />
+          <MenuLink text="Impact" link="#impact" />
         </div>
       </div>
     </div>

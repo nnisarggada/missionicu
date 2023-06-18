@@ -1,6 +1,6 @@
 import React from "react";
 
-const Taluka = () => {
+const Nominate = () => {
   const ScrollingDiv = () => {
     const names = [
       "Taluka",
@@ -41,7 +41,10 @@ const Taluka = () => {
   };
 
   return (
-    <div className="h-section flex flex-col items-center justify-center gap-6 px-4 text-center">
+    <div
+      id="nominate"
+      className="flex flex-col items-center justify-center gap-6 p-4 pt-28 text-center"
+    >
       <h2 className="text-2xl text-red-600 font-medium">MAKE A DIFFERENCE</h2>
       <h1 className="text-2xl text-brand-700 font-extrabold">
         Nominate your local hospital
@@ -71,4 +74,4 @@ const Taluka = () => {
   );
 };
 
-export default Taluka;
+export default Nominate;
