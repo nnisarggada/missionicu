@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Partners from "./components/Partners";
 import Taluka from "./components/Taluka";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Home />
       <Taluka />
+      <Partners />
     </div>
   );
 }

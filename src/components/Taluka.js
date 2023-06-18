@@ -1,7 +1,35 @@
 import React from "react";
-import ScrollingDiv from "./ScrollingDiv";
 
 const Taluka = () => {
+  const ScrollingDiv = () => {
+    const names = [
+      "Taluka",
+      "Taluka",
+      "Taluka",
+      "Taluka",
+      "Taluka",
+      "Taluka",
+      "Taluka",
+    ];
+
+    return (
+      <div className="w-screen overflow-x-hidden">
+        <div className="h-16 flex items-center space-x-4 animate-scrolling">
+          {names.map((name, index) => (
+            <div key={index} className="whitespace-nowrap flex-grow">
+              {name}
+            </div>
+          ))}
+          {names.map((name, index) => (
+            <div key={index} className="whitespace-nowrap flex-grow">
+              {name}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   const TalukaInput = ({ text }) => {
     return (
       <input
