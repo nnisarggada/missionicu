@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Nominate from "./Nominate";
 import Partners from "./Partners";
 import Impact from "./Impact";
+import Alert from "./Alert";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       <Nominate />
       <Partners />
       <Impact />
+      <Alert text="Nomination Successful" />
     </div>
   );
 }

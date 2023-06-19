@@ -1,4 +1,5 @@
 import React from "react";
+import Alert from "./Alert";
 
 const Nominate = () => {
   const ScrollingDiv = () => {
@@ -41,38 +42,17 @@ const Nominate = () => {
     );
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = (event) => {
+    event.target.submit();
+    document
+      .getElementById("alert-nomination")
+      .classList.remove("-bottom-full");
+    document.getElementById("alert-nomination").classList.add("bottom-4");
 
-    const form = event.target;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(
-        "https://hooks.airtable.com/workflows/v1/genericWebhook/app7RDwaqUwyB3tmy/wfl1AzTGrTg7gTWvy/wtrPqhX2ygROnhSNP",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
-
-      if (response.ok) {
-        // Successful submission
-        showPopup("Form submitted successfully!");
-      } else {
-        // Handle the submission error
-        showPopup("An error occurred while submitting the form.");
-      }
-    } catch (error) {
-      // Handle any other errors that occur during the submission
-      showPopup("An error occurred while submitting the form.");
-      console.error(error);
-    }
-  };
-
-  const showPopup = (message) => {
-    // Implement your desired popup display mechanism here (e.g., using a modal or alert)
-    alert(message);
+    setTimeout(() => {
+      document.getElementById("alert-nomination").classList.remove("bottom-4");
+      document.getElementById("alert-nomination").classList.add("-bottom-full");
+    }, 2000);
   };
 
   return (
@@ -88,7 +68,12 @@ const Nominate = () => {
         Nominating your taluka can help us know where change is needed and act
         on it with the help of the local government
       </p>
+      <iframe name="dummyframe" id="dummyframe" className="hidden"></iframe>
+      <Alert id="nomination" text="Nomination Successful" />
       <form
+        action="https://hooks.airtable.com/workflows/v1/genericWebhook/app7RDwaqUwyB3tmy/wfl1AzTGrTg7gTWvy/wtrPqhX2ygROnhSNP"
+        method="POST"
+        target="dummyframe"
         onSubmit={handleSubmit}
         className="taluka-form w-full text-xl flex flex-col items-center gap-4"
       >

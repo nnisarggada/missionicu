@@ -24,6 +24,10 @@ body {
   padding-top: 5rem;
 }
 
+.animate-scrolling {
+  animation: scroll 10s linear infinite;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0%);
@@ -33,6 +37,6 @@ body {
   }
 }
 
-.animate-scrolling {
-  animation: scroll 10s linear infinite;
+.alert {
+  animation: alert 1s linear;
 }
