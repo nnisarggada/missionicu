@@ -18,6 +18,9 @@ const Navbar = () => {
     return (
       <a
         href={link}
+        onClick={() => {
+          setShowMenu(false);
+        }}
         className="h-16 flex justify-center items-center w-full text-2xl font-bold border-solid border-2 border-brand-200"
       >
         {text}
@@ -45,10 +48,18 @@ const Navbar = () => {
         <div className="flex justify-end mb-10 -mr-2">
           <MdClose className="text-4xl" onClick={() => setShowMenu(false)} />
         </div>
-        <div className="flex flex-col items-center gap-4 text-2xl font-bold">
-          <MenuLink text="Home" link="#home" />
-          <MenuLink text="Nominate" link="#nominate" />
-          <MenuLink text="Impact" link="#impact" />
+        <div className="h-full flex flex-col justify-between items-center">
+          <div className="w-full flex flex-col items-center gap-4 text-2xl font-bold">
+            <MenuLink text="Home" link="/#home" />
+            <MenuLink text="Nominate" link="/#nominate" />
+            <MenuLink text="Impact" link="/#impact" />
+          </div>
+          <a
+            href="/hospitals"
+            className="h-16 flex justify-center items-center w-full text-2xl font-bold bg-brand-100 text-brand-700"
+          >
+            For Hospitals
+          </a>
         </div>
       </div>
     </div>

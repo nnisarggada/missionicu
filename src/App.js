@@ -1,18 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
-import Impact from "./components/Impact";
-import Navbar from "./components/Navbar";
-import Nominate from "./components/Nominate";
-import Partners from "./components/Partners";
+import Hospitals from "./components/Hospitals";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Home />
-      <Nominate />
-      <Partners />
-      <Impact />
+      <Router>
+        <Routes>
+          <Route path="" element={<Home />} />
+          <Route path="hospitals" element={<Hospitals />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
