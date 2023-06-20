@@ -68,7 +68,12 @@ const Nominate = () => {
         Nominating your taluka can help us know where change is needed and act
         on it with the help of the local government
       </p>
-      <iframe name="dummyframe" id="dummyframe" className="hidden"></iframe>
+      <iframe
+        title="dummyframe"
+        name="dummyframe"
+        id="dummyframe"
+        className="hidden"
+      ></iframe>
       <Alert id="nomination" text="Nomination Successful" />
       <form
         action="https://hooks.airtable.com/workflows/v1/genericWebhook/app7RDwaqUwyB3tmy/wfl1AzTGrTg7gTWvy/wtrPqhX2ygROnhSNP"
