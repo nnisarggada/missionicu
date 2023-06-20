@@ -50,12 +50,13 @@ const Home = () => {
           method="POST"
           target="dummyframe"
           onSubmit={handleSubmit}
+          className="h-full"
         >
-          <div className="flex justify-between text-4xl">
+          <div className="flex h-1/6 justify-between text-4xl">
             <h1>Get In Touch</h1>
             <MdClose onClick={() => setShowForm(false)} />
           </div>
-          <div className="flex flex-col items-center gap-10 mt-24">
+          <div className="flex flex-col h-5/6 items-center justify-evenly">
             <FormInput labelText="Name" placeholderText="Your Name" />
             <FormInput labelText="Email" placeholderText="Your Email" />
             <FormInput
