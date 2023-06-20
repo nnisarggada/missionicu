@@ -91,6 +91,7 @@ const Nominate = () => {
       >
         <TalukaInput text="Name" />
         <TalukaInput text="Email" />
+        <TalukaInput text="Phone Number" />
         <TalukaInput text="Taluka" />
         <TalukaInput text="Hospital Name" />
         <input
