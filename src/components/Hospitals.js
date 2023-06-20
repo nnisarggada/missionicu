@@ -26,6 +26,7 @@ const Hospitals = () => {
       <div className="w-full flex flex-col">
         <label for={labelText} className="text-2xl ml-2">
           {labelText}
+          <span className="text-red-600">*</span>
         </label>
         <input
           name={labelText}

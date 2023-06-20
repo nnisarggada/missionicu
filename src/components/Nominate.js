@@ -33,13 +33,19 @@ const Nominate = () => {
 
   const TalukaInput = ({ text }) => {
     return (
-      <input
-        name={text}
-        type="text"
-        placeholder={text}
-        className="w-full border-solid border-2 border-brand-600 p-2 rounded-md"
-        required
-      />
+      <div className="w-full flex flex-col text-left">
+        <label for={text} className="text-xl ml-2">
+          {text}
+          <span className="text-red-600">*</span>
+        </label>
+        <input
+          name={text}
+          type="text"
+          placeholder={text}
+          className="w-full border-solid border-2 border-brand-600 p-2 rounded-md mb-4"
+          required
+        />
+      </div>
     );
   };
 
@@ -86,7 +92,7 @@ const Nominate = () => {
         <TalukaInput text="Name" />
         <TalukaInput text="Email" />
         <TalukaInput text="Taluka" />
-        <TalukaInput text="Hospital" />
+        <TalukaInput text="Hospital Name" />
         <input
           type="submit"
           value="Nominate"

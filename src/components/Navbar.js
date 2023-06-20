@@ -31,6 +31,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 z-30 w-full h-20 flex items-center justify-between bg-brand-500 text-gray-100 px-4">
       <img
+        onClick={() => window.scrollTo(0, 0)}
         src={require("../assets/images/logo-light.png")}
         alt="Mission ICU Logo"
         className="h-full"
