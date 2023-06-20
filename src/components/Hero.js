@@ -31,6 +31,7 @@ const Home = () => {
           type="text"
           placeholder={placeholderText}
           className="border-solid border-2 border-brand-600 text-black text-xl p-2 rounded-md"
+          required
         />
       </div>
     );

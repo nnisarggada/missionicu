@@ -38,6 +38,7 @@ const Nominate = () => {
         type="text"
         placeholder={text}
         className="w-full border-solid border-2 border-brand-600 p-2 rounded-md"
+        required
       />
     );
   };
