@@ -7,9 +7,9 @@ import { ImStatsBars } from "react-icons/im";
 const Impact = () => {
   const InfoCard = ({ icon, text }) => {
     return (
-      <div className="h-28 w-full border-2 border-solid border-brand-500 rounded-md flex items-center text-brand-700">
+      <div className="h-28 w-full border-4 border-solid border-brand-500 rounded-xl flex items-center text-brand-700">
         <div className="w-1/3 flex justify-center">
-          <div className="h-20 aspect-square bg-brand-500 rounded-full flex justify-center items-center text-white text-3xl">
+          <div className="h-20 aspect-square bg-brand-500 rounded-full flex justify-center items-center text-white text-4xl">
             {icon}
           </div>
         </div>
@@ -34,7 +34,7 @@ const Impact = () => {
         these hospitals will help maximize the number of treated COVID
         instances.
       </p>
-      <InfoCard icon=<SlMagnifier /> text="Onground due-diligence" />
+      <InfoCard icon=<SlMagnifier /> text="On Ground due-diligence" />
       <InfoCard icon=<FaHandsHelping /> text="Need Assessment" />
       <InfoCard
         icon=<AiFillMedicineBox />
