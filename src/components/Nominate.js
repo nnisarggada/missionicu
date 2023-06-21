@@ -31,7 +31,7 @@ const Nominate = () => {
     );
   };
 
-  const TalukaInput = ({ text }) => {
+  const TalukaInput = ({ text, type = "text", pattern }) => {
     return (
       <div className="w-full flex flex-col text-left">
         <label for={text} className="text-xl ml-2">
@@ -40,7 +40,8 @@ const Nominate = () => {
         </label>
         <input
           name={text}
-          type="text"
+          type={type}
+          pattern={pattern}
           placeholder={text}
           className="w-full border-solid border-2 border-brand-600 p-2 rounded-md mb-4"
           required
@@ -90,8 +91,12 @@ const Nominate = () => {
         className="taluka-form w-full text-xl flex flex-col items-center gap-4"
       >
         <TalukaInput text="Name" />
-        <TalukaInput text="Email" />
-        <TalukaInput text="Phone Number" />
+        <TalukaInput text="Email" type="email" />
+        <TalukaInput
+          text="Phone Number"
+          type="tel"
+          pattern="\+?\d{0,3}\d{10}"
+        />
         <TalukaInput text="Taluka" />
         <TalukaInput text="Hospital Name" />
         <input

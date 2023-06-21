@@ -44,7 +44,7 @@ const Navbar = () => {
       />
       <div
         id="menu"
-        className="absolute top-0 -right-full h-screen w-72 flex flex-col bg-brand-400 p-6 transition-all duration-500"
+        className="absolute top-0 -right-full h-screen w-64 flex flex-col bg-brand-400 p-6 transition-all duration-500"
       >
         <div className="flex justify-end mb-10 -mr-2">
           <MdClose className="text-4xl" onClick={() => setShowMenu(false)} />

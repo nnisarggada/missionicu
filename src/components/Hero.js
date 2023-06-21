@@ -20,7 +20,12 @@ const Home = () => {
     }, 2000);
   };
 
-  const FormInput = ({ labelText, placeholderText }) => {
+  const FormInput = ({
+    labelText,
+    placeholderText,
+    type = "text",
+    pattern,
+  }) => {
     return (
       <div className="w-full flex flex-col">
         <label for={labelText} className="text-2xl ml-2">
@@ -29,7 +34,8 @@ const Home = () => {
         </label>
         <input
           name={labelText}
-          type="text"
+          type={type}
+          pattern={pattern}
           placeholder={placeholderText}
           className="border-solid border-2 border-brand-600 text-black text-xl p-2 rounded-md"
           required
@@ -60,9 +66,15 @@ const Home = () => {
           </div>
           <div className="flex flex-col h-5/6 items-center justify-evenly">
             <FormInput labelText="Name" placeholderText="Your Name" />
-            <FormInput labelText="Email" placeholderText="Your Email" />
+            <FormInput
+              labelText="Email"
+              type="email"
+              placeholderText="Your Email"
+            />
             <FormInput
               labelText="Phone Number"
+              type="tel"
+              pattern="\+?\d{0,3}\d{10}"
               placeholderText="Your Phone Number"
             />
             <FormInput
