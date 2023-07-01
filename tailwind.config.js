@@ -9,6 +9,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: "url('../src/assets/images/hero.png')",
+        beds: "url('../src/assets/images/beds.png')",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

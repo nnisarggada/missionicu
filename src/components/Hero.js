@@ -4,7 +4,6 @@ import Alert from "./Alert";
 
 const Home = () => {
   const [showForm, setShowForm] = React.useState(false);
-
   const handleSubmit = (event) => {
     event.target.submit();
     document.getElementById("alert-donor").classList.remove("-bottom-full");
