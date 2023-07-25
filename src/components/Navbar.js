@@ -21,7 +21,7 @@ const Navbar = () => {
         onClick={() => {
           setShowMenu(false);
         }}
-        className="h-16 flex justify-center items-center w-full text-2xl font-bold border-solid border-2 border-brand-200"
+        className="h-16 flex justify-center items-center w-full text-2xl font-bold border-solid border-2 border-brand-200 md:text-3xl md:h-20"
       >
         {text}
       </a>
@@ -37,27 +37,30 @@ const Navbar = () => {
         className="h-full"
       />
       <MdMenu
-        className="text-4xl"
+        className="text-4xl md:text-5xl"
         onClick={() => {
           setShowMenu(true);
         }}
       />
       <div
         id="menu"
-        className="absolute top-0 -right-full h-screen w-64 flex flex-col bg-brand-400 p-6 transition-all duration-500"
+        className="absolute top-0 -right-full h-screen w-64 flex flex-col bg-brand-400 p-6 transition-all duration-500 md:w-80"
       >
         <div className="flex justify-end mb-10 -mr-2">
-          <MdClose className="text-4xl" onClick={() => setShowMenu(false)} />
+          <MdClose
+            className="text-4xl md:text-5xl"
+            onClick={() => setShowMenu(false)}
+          />
         </div>
         <div className="h-full flex flex-col justify-between items-center">
-          <div className="w-full flex flex-col items-center gap-4 text-2xl font-bold">
+          <div className="w-full flex flex-col items-center gap-4 font-bold">
             <MenuLink text="Home" link="/#home" />
             <MenuLink text="Nominate" link="/#nominate" />
             <MenuLink text="Impact" link="/#impact" />
           </div>
           <a
             href="/hospitals"
-            className="h-16 flex justify-center items-center w-full text-2xl font-bold bg-brand-100 text-brand-700"
+            className="h-16 flex justify-center items-center w-full text-2xl font-bold bg-brand-100 text-brand-700 md:text-3xl"
           >
             For Hospitals
           </a>

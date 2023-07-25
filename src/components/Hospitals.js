@@ -61,11 +61,11 @@ const Hospitals = () => {
           onSubmit={handleSubmit}
           className="h-full"
         >
-          <div className="flex h-1/6 justify-between text-4xl">
+          <div className="flex h-1/6 justify-between text-4xl md:text-5xl">
             <h1>Get In Touch</h1>
             <MdClose onClick={() => setShowForm(false)} />
           </div>
-          <div className="flex flex-col h-5/6 items-center justify-evenly">
+          <div className="flex flex-col h-5/6 items-center justify-evenly md:w-2/3 md:mx-auto">
             <FormInput labelText="Name" placeholderText="Your Name" />
             <FormInput
               labelText="Email"
@@ -111,17 +111,17 @@ const Hospitals = () => {
       <Navbar />
       <div
         id="home"
-        className="h-section bg-hero bg-no-repeat bg-cover px-4 flex flex-col justify-center gap-6 text-white"
+        className="h-section bg-hero bg-no-repeat bg-cover px-4 flex flex-col justify-center gap-6 text-white md:px-6"
       >
-        <h1 className="text-6xl font-bold">Reach Out</h1>
-        <h2 className="text-2xl">
+        <h1 className="text-6xl font-bold md:text-7xl">Reach Out</h1>
+        <h2 className="text-2xl md:text-3xl">
           To learn more about how we can assist your hospital, please get in
           touch with us. Together, let's make a difference in healthcare and
           create a brighter future for those in need.
         </h2>
         <button
           onClick={() => setShowForm(true)}
-          className="bg-brand-500 px-6 py-4 h-16 w-fit flex justify-center items-center rounded-lg text-2xl font-bold"
+          className="bg-brand-500 px-6 py-4 h-16 w-fit flex justify-center items-center rounded-lg text-2xl font-bold md:h-20 md:text-3xl"
         >
           GET IN TOUCH
         </button>
